@@ -13,11 +13,11 @@ class TransferData:
                 localPath = os.path.join(rootdir,fileNames)
                 relativePath=os.path.relpath(localPath,file_from)
                 dropboxPath=os.path.join(file_to,relativePath)
-                with open(file_from, 'rb') as f:
+                with open(localPath, 'rb') as f:
                     dbx.files_upload(f.read(), dropboxPath)
 
 def main():
-    access_token = 'q5FVO60DiGoAAAAAAAAAAc89SY0WXebWANgOXPJF2RP7IJXc6FYleX1jr7NmbYy4'
+    access_token = 'DMlKVe2pvEoAAAAAAAAAAbTblB2azdnHYYlakrGYm42FjkVURIP8U-T923qLOMOp'
     transferData = TransferData(access_token)
 
     file_from = input('Enter The File To Transfer')
